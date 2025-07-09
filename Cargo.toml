@@ -3,4 +3,19 @@ name = "solana-validator-node-rust"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+crate-type = ["dylib"]
+
 [dependencies]
+tokio = "1.41"
+tokio-stream = "0.1"
+prost = "0.13"
+prost-build = "0.13" # Or latest version
+tonic = "0.12"
+tonic-build = "0.12"
+solana-sdk = "1.18"
+log = "0.4"
+[dev-dependencies]
+
+[build-dependencies]
+tonic-build = "0.12"
